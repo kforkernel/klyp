@@ -1,4 +1,4 @@
-# <PROJECT_NAME>
+# klyp
 
 A simple, lightweight CLI tool for gzip compression and decompression, built in Rust using `flate2`.
 
@@ -18,21 +18,27 @@ A simple, lightweight CLI tool for gzip compression and decompression, built in 
 **Linux (Tested)**
 ```bash
 git clone https://github.com<USERNAME>/<REPO_NAME>.git
-cd <REPO_NAME>
+cd klyp
 cargo build --release
 ```
-The compiled binary will be located at `target/release/<BINARY_NAME>`.
+The compiled binary will be located at `target/release/klyp`.
 
 **macOS & Windows (Untested)**
 Because this project uses standard Rust libraries (`std::fs`, `std::env`, `flate2`), it should compile and run natively on macOS and Windows, though it has not been officially tested on those platforms.
 
 ```bash
-git clone https://github.com<USERNAME>/<REPO_NAME>.git
-cd <REPO_NAME>
+git clone https://github.com/kforkernel/klyp.git
+cd klyp
 cargo build --release
 ```
-* **macOS binary path:** `target/release/<BINARY_NAME>`
-* **Windows binary path:** `target\release\<BINARY_NAME>.exe`
+Move klyp into the `/usr/local/bin` directory:
+
+```bash
+sudo mv ./target/release/klyp /usr/local/bin
+```
+
+* **macOS binary path:** `target/release/klyp`
+* **Windows binary path:** `target\release\klyp.exe`
 
 ## Usage
 
@@ -54,7 +60,7 @@ cargo build --release
 
 ### Compress a file
 ```bash
-./<BINARY_NAME> -e input.txt output.txt.gz
+./klyp -e input.txt output.txt.gz
 ```
 **Output:**
 ```text
@@ -75,14 +81,15 @@ Compression finished!
 
 ### Decompress a file
 ```bash
-./<BINARY_NAME> -d output.txt.gz restored.txt
+./klyp -d output.txt.gz restored.txt
 ```
 
 ## Dependencies
 
-* [`flate2`](https://crates.io) – Gzip compression and decompression streams.
-* [`indicatif`](https://crates.io) – Terminal progress bar for `-v` mode.
+* [`flate2`](https://crates.io/crates/flate2) – Gzip compression and decompression streams.
+* [`indicatif`](https://crates.io/crates/indicatif) – Terminal progress bar for `-v` mode.
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is under the kforkernel Use License (KUL) v1.0.
+For more details, read [LICENSE.md](LICENSE.md).
