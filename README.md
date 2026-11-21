@@ -17,11 +17,17 @@ A simple, lightweight CLI tool for gzip compression and decompression, built in 
 
 **Linux (Tested)**
 ```bash
-git clone https://github.com<USERNAME>/<REPO_NAME>.git
+git clone https://github.com/kforkernel/klyp.git
 cd klyp
 cargo build --release
 ```
 The compiled binary will be located at `target/release/klyp`.
+
+Move klyp into the `/usr/local/bin` directory:
+
+```bash
+sudo mv ./target/release/klyp /usr/local/bin
+```
 
 **macOS & Windows (Untested)**
 Because this project uses standard Rust libraries (`std::fs`, `std::env`, `flate2`), it should compile and run natively on macOS and Windows, though it has not been officially tested on those platforms.
@@ -30,11 +36,6 @@ Because this project uses standard Rust libraries (`std::fs`, `std::env`, `flate
 git clone https://github.com/kforkernel/klyp.git
 cd klyp
 cargo build --release
-```
-Move klyp into the `/usr/local/bin` directory:
-
-```bash
-sudo mv ./target/release/klyp /usr/local/bin
 ```
 
 * **macOS binary path:** `target/release/klyp`
