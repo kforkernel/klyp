@@ -44,8 +44,11 @@ cargo build --release
 ## Usage
 
 ```bash
-<BINARY_NAME> [-e | -d] <SRC> <DST> [-v]
+klyp [-e | -d] <SRC> <DST> [-v]
 ```
+
+> [!NOTE]
+> Note, `-v` flag must be at end of command.
 
 ### Flags & Arguments
 
@@ -61,7 +64,7 @@ cargo build --release
 
 ### Compress a file
 ```bash
-./klyp -e input.txt output.txt.gz
+./target/release/klyp -e input.txt output.txt.gz
 ```
 **Output:**
 ```text
@@ -71,7 +74,7 @@ Compression finished!
 
 ### Compress a file with progress bar (`-v`)
 ```bash
-./<BINARY_NAME> -e input.txt output.txt.gz -v
+./target/release/klyp -e input.txt output.txt.gz -v
 ```
 **Output:**
 ```text
@@ -83,6 +86,11 @@ Compression finished!
 ### Decompress a file
 ```bash
 ./klyp -d output.txt.gz restored.txt
+```
+
+### Decompress a file with progress bar (`-v`)
+```bash
+./klyp -d output.txt.gz restored.txt -v
 ```
 
 ## Dependencies
