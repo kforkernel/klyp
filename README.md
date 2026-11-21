@@ -33,7 +33,7 @@ sudo mv ./target/release/klyp /usr/local/bin
 Because this project uses standard Rust libraries (`std::fs`, `std::env`, `flate2`), it should compile and run natively on macOS and Windows, though it has not been officially tested on those platforms.
 
 ```bash
-git clone https://github.com/kforkernel/klyp
+git clone https://github.com/kforkernel/klyp.com
 cd klyp
 cargo build --release
 ```
