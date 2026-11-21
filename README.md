@@ -48,7 +48,8 @@ klyp [-e | -d] <SRC> <DST> [-v]
 ```
 
 > [!NOTE]
-> Note, `-v` flag must be at end of command.
+> The `-v` flag must be at end of command.
+
 
 ### Flags & Arguments
 
